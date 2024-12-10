@@ -13,14 +13,11 @@ disabled = False  # disabled flag
 
 # loop trough each statement and run the appropriate action
 for statement in statements:
-    print(statement)
     # update the flag after a do()/don't()
     if statement == "don't()":
         disabled = True
-        print(f"{disabled=}")
     elif statement == "do()":
         disabled = False
-        print(f"{disabled=}")
     # add [a,b] to muls, where a & b are the values to be multiplied
     elif not disabled:
         muls.append([int(val) for val in statement[4:-1].split(",")])

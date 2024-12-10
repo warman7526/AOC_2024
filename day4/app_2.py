@@ -10,8 +10,8 @@ def get_subsquares(ws, size=3):
     res = []
 
     # fill res with all possible subsquares in the ws that are size x size
-    for i in range(len(ws) - size):
-        for j in range(len(ws[0]) - size):
+    for i in range(len(ws) - size+1):
+        for j in range(len(ws[0]) - size+1):
             res.append(";".join([row[j : j + size] for row in ws[i : i + size]]))
 
     return res

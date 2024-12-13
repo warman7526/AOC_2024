@@ -49,8 +49,3 @@ corrected_updates = [correct(i, update) for i,update in enumerate(updates) if no
 
 middle_pages = [middle_page(update) for update in corrected_updates]
 print(f"{middle_pages=}\n{sum(middle_pages)=}")
-
-checks = 0
-for update in corrected_updates:
-    checks += math.factorial(len(update))
-print(math.log(checks))
